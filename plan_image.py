@@ -116,7 +116,7 @@ def get_optimization_function(active_models, imagenet_indexes, array_to_image_fn
           imr = img
         else:
           imr = img.resize(target_size, resample=Image.BILINEAR)
-        target_size_table[target_size].append(image.img_to_array(imr))
+        target_size_table[target_size].append(tf.keras.utils.img_to_array(imr))
 
     # for k in target_size_table:
     #   print("_____+++", k, len(target_size_table[k]))
@@ -215,7 +215,7 @@ def get_optimization_function_noindex(active_models, array_to_image_fn, render_s
           imr = img
         else:
           imr = img.resize(target_size, resample=Image.BILINEAR)
-        target_size_table[target_size].append(image.img_to_array(imr))
+        target_size_table[target_size].append(tf.keras.utils.img_to_array(imr))
 
     # convert all lists to np arrays
     for target_size in target_size_table:

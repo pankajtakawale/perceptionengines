@@ -1,6 +1,7 @@
 from classloader import ScoringInterface
 import os
 import keras
+from tensorflow.keras import applications
 
 class Scoring(ScoringInterface): 
     def __init__(self, config):

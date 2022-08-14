@@ -9,6 +9,7 @@ import os
 import glob
 import json
 import random
+import tensorflow as tf
 
 from keras.preprocessing import image
 from keras.applications.imagenet_utils import decode_predictions
@@ -320,9 +321,9 @@ def main():
             image_preprocessor = model.get_input_preprocessor()
             # print("So size and prep: ", target_size, image_preprocessor)
     
-            img = image.load_img(img_path, target_size=target_size)
+            img = tf.keras.utils.load_img(img_path, target_size=target_size)
             # img.save(f"debug_this_{target_size}.png")
-            x = image.img_to_array(img)
+            x = tf.keras.utils.img_to_array(img)
             x = np.expand_dims(x, axis=0)
             # print("X shape: ", x.shape)
             if image_preprocessor is not None:
