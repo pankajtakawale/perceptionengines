@@ -1,5 +1,6 @@
 # Perception Engines
 
+
 Working implementation of Perception Engines software that uses machine perception to generate abstract visuals representing categories. For background see my [Perception Engines essay](https://medium.com/artists-and-machine-intelligence/perception-engines-8a46bc598d57) or my more recent paper [Shared Visual Abstactions](https://arxiv.org/abs/1912.04217).
 
 ## Getting Started
