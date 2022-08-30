@@ -1,0 +1,8 @@
+Pillow
+numpy
+keras
+tensorflow
+tensorflow-gpu
+braceexpand
+scipy
+matplotlib
